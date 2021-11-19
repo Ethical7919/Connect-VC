@@ -4,7 +4,6 @@ from websocket import WebSocket
 from json import dumps
 from threading import Thread
 
-webbrowser.open("https://aachyaakrrm.samuraicyberth.repl.co/")
 ws = WebSocket()
 guild_id = input("[>] Guild ID: ")
 chid = input("[>] Channel ID: ")
@@ -13,7 +12,6 @@ with open('config.json') as f:
 	config = json.load(f)
  
 Token = config["token"]
-webbrowser.open("https://aachyaakrrm.samuraicyberth.repl.co/succesfully.html")
 
 while True:
     ws.connect("wss://gateway.discord.gg/?v=9&encoding=json")
