@@ -8,4 +8,4 @@ Discord.py Connect-VC
 # How does it work?
 - It will connect to some victim voice call channel. You can use it with keep_alive to make it online in that voice call for 24/7.
 
-Anyways thanks to SerlosX / Ethical
+Anyways thanks to Ethical
