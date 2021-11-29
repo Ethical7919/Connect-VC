@@ -15,4 +15,4 @@ Token = config["token"]
 while True:
     WebSocket.connect("wss://gateway.discord.gg/?v=9&encoding=json")
     WebSocket.send(dumps({"op": 2,"d": {"token": Token, "properties": {"$os": "windows","$browser": "Discord","$device": "desktop"}}}))
-    WebSocket.send(dumps({"op": 4,"d": {"guild_id": guild_id,"channel_id": chid,"self_mute": False,"self_deaf": False}}))
+    WebSocket.send(dumps({"op": 4,"d": {"guild_id": guild_id,"channel_id": chid,"self_mute": True,"self_deaf": True}}))
