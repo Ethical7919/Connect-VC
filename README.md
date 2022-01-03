@@ -10,4 +10,4 @@ Discord.py Connect-VC
 
 Anyways thanks to Ethical
 
-If you want me help just add me on Discord --> Ryanz#7919
+If you want me help just add me on Discord --> Nick Gur#7919
