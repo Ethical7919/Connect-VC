@@ -1,18 +1,15 @@
-import threading, json, webbrowser, requests, json
-from requests import get
+import threading
 from websocket import WebSocket
 from json import dumps
-from threading import Thread
 
-guild_id = input("[>] Guild ID: ")
-chid = input("[>] Channel ID: ")
+guildid = ""
+channel = ""
+Token = ""
 
-with open('config.json') as f:
-	config = json.load(f)
- 
-Token = config["token"]
-
-while True:
-    WebSocket.connect("wss://gateway.discord.gg/?v=9&encoding=json")
-    WebSocket.send(dumps({"op": 2,"d": {"token": Token, "properties": {"$os": "windows","$browser": "Discord","$device": "desktop"}}}))
-    WebSocket.send(dumps({"op": 4,"d": {"guild_id": guild_id,"channel_id": chid,"self_mute": True,"self_deaf": True}}))
+def ok_cool_dude():
+    ws = WebSocket()
+    ws.connect("wss://gateway.discord.gg/?v=9&encoding=json")
+    ws.send(dumps({"op": 2,"d": {"token": Token, "properties": {"$os": "windows","$browser": "Discord","$device": "desktop"}}}))
+    ws.send(dumps({"op": 4,"d": {"guild_id": guildid,"channel_id": channel, "self_mute": True,"self_deaf": True}}))
+        
+threading.Thread(target=ok_cool_dude).start()
